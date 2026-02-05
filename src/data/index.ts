@@ -66,10 +66,8 @@ export const projects = [
   { title: "Project Name", img: "/project4.png" },
 ];
 
-
-
-
-
 export const departmentLinks = ["Electrical", "Low Voltage", "Mechanical", "Civil"];
+
+export const socialIcons = ["f", "t", "in", "yt"];
 
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { quickLinks, departmentLinks } from "@/data";
+import { quickLinks, departmentLinks, socialIcons } from "@/data";
 
 export default function Footer() {
   return (
@@ -72,7 +72,7 @@ export default function Footer() {
             </button>
 
             <div className="flex gap-3 mt-6">
-              {["f", "t"].map((icon) => (
+              {socialIcons.map((icon) => (
                 <button
                   key={icon}
                   className="w-8 h-8 border border-gray-400 flex items-center justify-center text-xs hover:border-[#c9a25d] hover:text-[#c9a25d] transition-colors"

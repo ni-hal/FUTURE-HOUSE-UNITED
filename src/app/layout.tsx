@@ -7,8 +7,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "sidrahintl.com - Al-Amar Consultant",
-  description: "Factory, Industrial & Construction Template - Al-Amar Consultant",
+  title: "FUTURE HOUSE UNITED",
+  description: "GENERAL TRADING & CONTRACTING CO.",
 };
 
 export default function RootLayout({
