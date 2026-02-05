@@ -1,11 +1,22 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { heroSlides } from "@/data";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slide = heroSlides[currentSlide];
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -54,10 +65,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation arrows */}
+      {/* Navigation arrows - Hidden on mobile */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#1f2a44] text-white flex items-center justify-center over:bg-[#b8934f]"
+        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#1f2a44] text-white items-center justify-center hover:bg-[#b8934f]"
         aria-label="Previous slide"
       >
         ‹
@@ -65,7 +76,7 @@ export default function Hero() {
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#1f2a44] text-white flex items-center justify-center hover:bg-[#b8934f]"
+        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#1f2a44] text-white items-center justify-center hover:bg-[#b8934f]"
         aria-label="Next slide"
       >
         ›
