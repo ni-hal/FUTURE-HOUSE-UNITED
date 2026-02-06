@@ -16,7 +16,7 @@ export default function Departments() {
           <div className="w-10 h-0.5 bg-[#c9a25d] mx-auto mt-4" />
         </div>
 
-        {/* Department Items */}
+      
         <div className="space-y-0">
           {departments.map((dept, index) => (
             <div

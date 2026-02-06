@@ -13,7 +13,7 @@ export default function Footer() {
           priority
         />
 
-        {/* White overlay */}
+        
         <div className="absolute inset-0 " />
 
         <div className="relative z-10">

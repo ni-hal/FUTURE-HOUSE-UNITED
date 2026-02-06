@@ -64,6 +64,7 @@ export const projects = [
   { title: "Project Name", img: "/project2.png" },
   { title: "Project Name", img: "/project3.png" },
   { title: "Project Name", img: "/project4.png" },
+   { title: "Project Name", img: "/project4.png" },
 ];
 
 export const departmentLinks = ["Electrical", "Low Voltage", "Mechanical", "Civil"];
